@@ -1,0 +1,81 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.tabs {
+  overflow: hidden;
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  width: auto;
+  height: 5rem;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.icons {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: .2rem;
+
+
+}
+
+.selected {
+  display: flex;
+  height: 2.6rem;
+  width: 7rem;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  gap: 1rem;
+
+  /* font: */
+  color: var(--Dark, #222);
+  font-family: Segoe UI;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  border-radius: 0.75rem 0.75rem 0rem 0rem;
+}
+
+.notSelected {
+  display: flex;
+  height: 2.6rem;
+  width: 7rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f0f0f0;
+  gap: 1rem;
+
+  /* font: */
+  color: var(--Dark, #222);
+  font-family: Segoe UI;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 0.75rem 0.75rem 0rem 0rem;
+  border: 1px solid #dbdbdb;
+}
+
+.content{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+}

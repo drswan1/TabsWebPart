@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "G:/My Drive/work"
+	},
+	{
+		"path": "../Tabs"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "work"
+  }
+}
