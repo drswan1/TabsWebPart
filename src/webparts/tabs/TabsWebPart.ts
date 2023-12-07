@@ -57,7 +57,7 @@ export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps
 
     // Render the HTML
     this.domElement.innerHTML = `
-    <section class=${styles.tabs} ">
+    <section class="${styles.tabs} ">
     <div class="${styles.container}">
       <!-- Add an ID to each div for easy selection in TypeScript/JavaScript -->
       <a href="${this.tabsHashMap.orientiert}" data-tab="orientiert" class="${currentTabKey === 'orientiert' ? styles.selected : styles.notSelected}">
