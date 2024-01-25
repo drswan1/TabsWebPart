@@ -1,5 +1,10 @@
 @import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@media (width < 700px) {
+  #siteName {
+    visibility: hidden;
+  }
 
+}
 .tabs {
   overflow: hidden;
   &.teams {

@@ -63,19 +63,19 @@ export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps
       <a href="${this.tabsHashMap.orientiert}" data-tab="orientiert" class="${currentTabKey === 'orientiert' ? styles.selected : styles.notSelected}">
         <div class="${styles.content}">
           <img class="${styles.icons}" src="${require('./assets/Orientiert.png')}" />
-          <div> Orientiert </div>
+          <div id="siteName"> Orientiert </div>
         </div>
       </a>
       <a href="${this.tabsHashMap.informiert}" data-tab="informiert" class="${currentTabKey === 'informiert' ? styles.selected : styles.notSelected}">
         <div class="${styles.content}">
           <img class="${styles.icons}" src="${require('./assets/Informiert.svg')}" />
-          <div> Informiert </div>
+          <div id="siteName"> Informiert </div>
         </div>
       </a>
       <a href="${this.tabsHashMap.verbunden}" data-tab="verbunden" class="${currentTabKey === 'verbunden' ? styles.selected : styles.notSelected}">
         <div class="${styles.content}">
           <img class="${styles.icons}" src="${require('./assets/Verbunden.svg')}" /> 
-          <div> Verbunden </div>
+          <div id="siteName"> Verbunden </div>
         </div>
       </a>
     </div>
