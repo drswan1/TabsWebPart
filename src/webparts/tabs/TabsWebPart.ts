@@ -44,6 +44,7 @@ export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps
   }
 
   public render(): void {
+
     if (typeof window !== 'undefined') {
       const currentURL = window.location.href;
 
@@ -55,30 +56,39 @@ export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps
       this.setSelectedTab(currentTabKey);
     }
 
+
+
     // Render the HTML
     this.domElement.innerHTML = `
     <section class="${styles.tabs} ">
     <div class="${styles.container}">
-      <!-- Add an ID to each div for easy selection in TypeScript/JavaScript -->
+
       <a href="${this.tabsHashMap.orientiert}" data-tab="orientiert" class="${currentTabKey === 'orientiert' ? styles.selected : styles.notSelected}">
         <div class="${styles.content}">
           <img class="${styles.icons}" src="${require('./assets/Orientiert.png')}" />
           <div id="${styles.siteName}"> Orientiert </div>
         </div>
       </a>
+
       <a href="${this.tabsHashMap.informiert}" data-tab="informiert" class="${currentTabKey === 'informiert' ? styles.selected : styles.notSelected}">
         <div class="${styles.content}">
           <img class="${styles.icons}" src="${require('./assets/Informiert.svg')}" />
           <div id="${styles.siteName}"> Informiert </div>
         </div>
       </a>
+
       <a href="${this.tabsHashMap.verbunden}" data-tab="verbunden" class="${currentTabKey === 'verbunden' ? styles.selected : styles.notSelected}">
         <div class="${styles.content}">
           <img class="${styles.icons}" src="${require('./assets/Verbunden.svg')}" /> 
           <div id="${styles.siteName}"> Verbunden </div>
         </div>
       </a>
+      <div class="${styles.marker}">
+        <div id="${styles.left}"></div>
+        <div id="${styles.middle}"></div>
+        <div id="${styles.right}"></div>
     </div>
+  </div>
   </section>`;
   }
 }
