@@ -15,8 +15,6 @@
     width: 4.5rem;
     align-items: center;
     justify-content: center;
-    background: white;
-    gap: 1rem;
    
   
     /* font: */
@@ -47,10 +45,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
-  
-  /* Set the desired scale value for elements with the notSelected class */
-    transition: box-shadow .5s,  opacity 0.15s, background-color 0.15s, color 0.15s, transform .5s ease;
   }
 }
 
@@ -61,8 +55,7 @@
     width: 9rem;
     align-items: center;
     justify-content: center;
-    background: white;
-    gap: 1rem;
+    z-index: 100;
    
   
     /* font: */
@@ -82,6 +75,9 @@
     justify-content: center;
     cursor: pointer; 
     user-select: none;
+    // pointer-events: auto;
+    // transition: opacity 0.4s ease-in-out;  
+    
 
     
   
@@ -93,9 +89,6 @@
     font-weight: 300; 
     line-height: normal;
   
-  /* Set the desired scale value for elements with the notSelected class */
-    transition: box-shadow .5s,  opacity 0.15s, background-color 0.15s, color 0.15s, transform .5s ease;
-  
   }
 
   .icons {
@@ -105,13 +98,11 @@
   }
 
 }
+
 .selected .icons {
   visibility: hidden;
 }
 
-.notSelected .content {
-  opacity: 1;
-}
 
 .tabs {
   overflow: hidden;
@@ -119,6 +110,7 @@
     font-family: $ms-font-family-fallbacks;
   }
 }
+
 .tabs {
 background-color: white;
 width: 100%;
@@ -139,11 +131,7 @@ width: 100%;
   display:flex;
   align-items: center;
   justify-content: center;
-  opacity: .4; 
-  transition: opacity .4s ease-in-out;
-}
-.content:hover{
-  opacity: 1; 
+
 }
 
 a{
@@ -151,47 +139,30 @@ a{
 }
 
 .marker{
-  height: 4rem;
-  width: auto;
+  height: 75%;
+  width: 100%;
   position: absolute; 
   display: flex; 
   flex-direction: row;
   transition: transform .2s ease-in-out;
   top:0;
-  opacity: .8;
-}
+  z-index: 0;
 
-.marker #right, .marker #left{
-  background-color: white;
-  
-  // border: 1px solid #e7e7e7;
 }
 
 .marker #left{
-  width: calc(66%);
-  border-radius: 32px;
-  border-bottom: 2px solid #e7e7e7;
-  border-top-right-radius: 0px;
-  // box-shadow: -21px 1px 12px;
-  box-shadow: #ebebeb;
-
-
+  background-color: transparent;
+  z-index: 0
 }
 
 .marker #middle{
-  width: calc(50%);
-  border-top: 3px solid #e7e7e7;
-  border-radius: 32px;
+  background-color: transparent;
+  z-index: 0
 }
 
 .marker #right{
-  width: calc(66%);
-  border-bottom: 2px solid #e7e7e7;
-  border-radius: 32px;
-  border-left-style:none;
- box-shadow: 21px 3px 12px;
-  border-top-left-radius: 0px;
-  box-shadow: #ebebeb;
+  background-color: transparent;
+  z-index: 0
 
 }
 

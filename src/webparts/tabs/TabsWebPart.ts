@@ -90,6 +90,60 @@ export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps
     </div>
   </div>
   </section>`;
+  console.log(currentTabKey);
+
+  const leftMarker = document.getElementById(styles.left);
+  const middleMarker = document.getElementById(styles.middle);
+  const rightMarker = document.getElementById(styles.right);
+
+  if (currentTabKey === 'orientiert') {
+    (leftMarker as HTMLElement).style.borderTop = "3px solid #e7e7e7";
+    (leftMarker as HTMLElement).style.borderRadius = "32px";
+    (leftMarker as HTMLElement).style.width = "calc(50%)";
+
+    (middleMarker as HTMLElement).style.borderBottom = "2px solid #e7e7e7";
+    (middleMarker as HTMLElement).style.borderBottomLeftRadius = "32px";
+    (middleMarker as HTMLElement).style.boxShadow = "0px 15px 36px -20px #e7e7e7";
+    (middleMarker as HTMLElement).style.width = "calc(50%)";
+
+    (rightMarker as HTMLElement).style.borderBottom = "2px solid #e7e7e7";
+    (rightMarker as HTMLElement).style.boxShadow = "0px 15px 36px -20px #e7e7e7";
+    (rightMarker as HTMLElement).style.width = "calc(50%)";
+    console.log('orientiert');
+  }
+
+  if (currentTabKey === 'informiert') {
+    (leftMarker as HTMLElement).style.borderBottom = "2px solid #e7e7e7";
+    (leftMarker as HTMLElement).style.borderBottomRightRadius = "32px";
+    (leftMarker as HTMLElement).style.boxShadow = "0px 15px 36px -20px #e7e7e7";
+    (leftMarker as HTMLElement).style.width = "calc(50%)";
+
+    (middleMarker as HTMLElement).style.borderTop = "3px solid #e7e7e7";
+    (middleMarker as HTMLElement).style.borderRadius = "32px";
+    (middleMarker as HTMLElement).style.width = "calc(50%)";
+
+    (rightMarker as HTMLElement).style.borderBottom = "2px solid #e7e7e7";
+    (rightMarker as HTMLElement).style.borderBottomLeftRadius = "32px";
+    (rightMarker as HTMLElement).style.boxShadow = "0px 15px 36px -20px #e7e7e7";
+    (rightMarker as HTMLElement).style.width = "calc(50%)";
+    console.log('informiert');
+  }
+
+  if (currentTabKey === 'verbunden') {
+    (leftMarker as HTMLElement).style.borderBottom = "2px solid #e7e7e7";
+    (leftMarker as HTMLElement).style.boxShadow = "0px 15px 36px -20px #e7e7e7";
+    (leftMarker as HTMLElement).style.width = "calc(50%)";
+
+    (middleMarker as HTMLElement).style.borderBottom = "2px solid #e7e7e7";
+    (middleMarker as HTMLElement).style.borderBottomRightRadius = "32px";
+    (middleMarker as HTMLElement).style.boxShadow = "0px 15px 36px -20px #e7e7e7";
+    (middleMarker as HTMLElement).style.width = "calc(50%)";
+
+    (rightMarker as HTMLElement).style.borderTop = "3px solid #e7e7e7";
+    (rightMarker as HTMLElement).style.borderRadius = "32px";
+    (rightMarker as HTMLElement).style.width = "calc(50%)";
+    console.log('verbunden');
+  }
   }
 }
 
