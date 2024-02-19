@@ -4,59 +4,18 @@
     visibility: hidden;
   }
   .icons {
-    height: 4.4rem;
-    width: 4.4rem;
-    margin-right: -4.6rem;
+    height: 3rem;
+    width: 3rem;
+    margin-right: -6.0rem;
   }
 
   .selected {
-    display: flex;
-    height: 4.5rem;
-    width: 4.5rem;
-    align-items: center;
-    justify-content: center;
-   
-  
-    /* font: */
-    color: var(--Dark, #222);
-    font-family: Segoe UI;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-
-  .notSelected{
-    display: flex;
-    height: 8.8rem;
-    width: 8.8rem;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer; 
-    user-select: none;
-    
-  
-    
-  
-    /* font: */
-    color: var(--Dark, #222);
-    font-family: Segoe UI;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-}
-
-@media (width>900px){
-  .selected {
+    position: relative;
     display: flex;
     height: 3rem;
     width: 9rem;
     align-items: center;
     justify-content: center;
-    z-index: 100;
-   
   
     /* font: */
     color: var(--Dark, #5b5b5b);
@@ -67,27 +26,61 @@
     line-height: normal;
   }
 
-  .notSelected {
+  .notSelected{
     display: flex;
     height: 3rem;
     width: 9rem;
     align-items: center;
     justify-content: center;
-    cursor: pointer; 
-    user-select: none;
-    // pointer-events: auto;
-    // transition: opacity 0.4s ease-in-out;  
-    
-
-    
+    z-index: 100;
   
     /* font: */
     color: var(--Dark, #222);
     font-family: Segoe UI;
     font-size: 1.25rem;
     font-style: normal;
-    font-weight: 300; 
+    font-weight: 400;
     line-height: normal;
+  }
+}
+
+@media (width>900px){
+  .selected {
+    position: relative;
+    display: flex;
+    height: 3rem;
+    width: 9rem;
+    align-items: center;
+    justify-content: center;
+  
+    /* font: */
+    color: var(--Dark, #5b5b5b);
+    font-family: Segoe UI;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    .icons {
+      visibility: hidden;
+    }
+  }
+
+  .notSelected {
+    display: flex;
+    height: 3rem;
+    width: 9rem;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    
+    /* font: */
+    color: var(--Dark, #222);
+    font-family: Segoe UI;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+ 
   
   }
 
@@ -99,16 +92,24 @@
 
 }
 
-.selected .icons {
-  visibility: hidden;
+.selected .content #siteName {
+  
+  transform: translate(-15%);
 }
-
 
 .tabs {
   overflow: hidden;
   &.teams {
     font-family: $ms-font-family-fallbacks;
   }
+}
+
+.notSelected .content{
+  opacity: .4;
+  transition: opacity .4s ease-in-out;
+}
+.notSelected .content:hover {
+  opacity: 1;
 }
 
 .tabs {
@@ -157,12 +158,11 @@ a{
 
 .marker #middle{
   background-color: transparent;
-  z-index: 0
+  z-index: 0;
 }
 
 .marker #right{
   background-color: transparent;
-  z-index: 0
-
+  z-index: 0;
 }
 
