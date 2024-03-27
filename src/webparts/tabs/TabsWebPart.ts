@@ -63,30 +63,30 @@ export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps
     <section class="${styles.tabs} ">
     <div class="${styles.container}">
 
-      <a href="${this.tabsHashMap.orientiert}" data-tab="orientiert" class="${currentTabKey === 'orientiert' ? styles.selected : styles.notSelected}">
+      
+
+     
+
+      
+      <div class="${styles.marker}">
+        <div id="${styles.left}"><a href="${this.tabsHashMap.orientiert}" data-tab="orientiert" class="${currentTabKey === 'orientiert' ? styles.selected : styles.notSelected}">
         <div class="${styles.content}">
           <img class="${styles.icons}" src="${require('./assets/Orientiert.png')}" />
           <div id="${styles.siteName}"> Orientiert </div>
         </div>
-      </a>
-
-      <a href="${this.tabsHashMap.informiert}" data-tab="informiert" class="${currentTabKey === 'informiert' ? styles.selected : styles.notSelected}">
+      </a></div>
+        <div id="${styles.middle}"> <a href="${this.tabsHashMap.informiert}" data-tab="informiert" class="${currentTabKey === 'informiert' ? styles.selected : styles.notSelected}">
         <div class="${styles.content}">
           <img class="${styles.icons}" src="${require('./assets/Informiert.svg')}" />
           <div id="${styles.siteName}"> Informiert </div>
         </div>
-      </a>
-
-      <a href="${this.tabsHashMap.verbunden}" data-tab="verbunden" class="${currentTabKey === 'verbunden' ? styles.selected : styles.notSelected}">
+      </a></div>
+        <div id="${styles.right}"><a href="${this.tabsHashMap.verbunden}" data-tab="verbunden" class="${currentTabKey === 'verbunden' ? styles.selected : styles.notSelected}">
         <div class="${styles.content}">
           <img class="${styles.icons}" src="${require('./assets/Verbunden.svg')}" /> 
           <div id="${styles.siteName}"> Verbunden </div>
         </div>
-      </a>
-      <div class="${styles.marker}">
-        <div id="${styles.left}"></div>
-        <div id="${styles.middle}"></div>
-        <div id="${styles.right}"></div>
+      </a></div>
     </div>
   </div>
   </section>`;
@@ -100,15 +100,19 @@ export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps
     (leftMarker as HTMLElement).style.borderTop = "3px solid #c4c4c4";
     (leftMarker as HTMLElement).style.borderRadius = "32px";
     (leftMarker as HTMLElement).style.width = "calc(50%)";
+    (leftMarker as HTMLElement).style.justifyContent = "center";
+    
 
     (middleMarker as HTMLElement).style.borderBottom = "2px solid #c4c4c4";
     (middleMarker as HTMLElement).style.borderBottomLeftRadius = "32px";
     (middleMarker as HTMLElement).style.boxShadow = "0px 15px 36px -20px #e7e7e7";
     (middleMarker as HTMLElement).style.width = "calc(50%)";
+    (middleMarker as HTMLElement).style.justifyContent = "center";
 
     (rightMarker as HTMLElement).style.borderBottom = "2px solid #c4c4c4";
     (rightMarker as HTMLElement).style.boxShadow = "0px 15px 36px -20px #e7e7e7";
     (rightMarker as HTMLElement).style.width = "calc(50%)";
+    (rightMarker	 as HTMLElement).style.justifyContent = "center";
     console.log('orientiert');
   }
 
@@ -117,15 +121,18 @@ export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps
     (leftMarker as HTMLElement).style.borderBottomRightRadius = "32px";
     (leftMarker as HTMLElement).style.boxShadow = "0px 15px 36px -20px #e7e7e7";
     (leftMarker as HTMLElement).style.width = "calc(50%)";
+    (leftMarker as HTMLElement).style.justifyContent = "center";
 
     (middleMarker as HTMLElement).style.borderTop = "3px solid #c4c4c4";
     (middleMarker as HTMLElement).style.borderRadius = "32px";
     (middleMarker as HTMLElement).style.width = "calc(50%)";
+    (middleMarker as HTMLElement).style.justifyContent = "center";
 
     (rightMarker as HTMLElement).style.borderBottom = "2px solid #c4c4c4";
     (rightMarker as HTMLElement).style.borderBottomLeftRadius = "32px";
     (rightMarker as HTMLElement).style.boxShadow = "0px 15px 36px -20px #e7e7e7";
     (rightMarker as HTMLElement).style.width = "calc(50%)";
+    (rightMarker	 as HTMLElement).style.justifyContent = "center";
     console.log('informiert');
   }
 
@@ -133,15 +140,18 @@ export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps
     (leftMarker as HTMLElement).style.borderBottom = "2px solid #c4c4c4";
     (leftMarker as HTMLElement).style.boxShadow = "0px 15px 36px -20px #e7e7e7";
     (leftMarker as HTMLElement).style.width = "calc(50%)";
+    (leftMarker as HTMLElement).style.justifyContent = "center";
 
     (middleMarker as HTMLElement).style.borderBottom = "2px solid #c4c4c4";
     (middleMarker as HTMLElement).style.borderBottomRightRadius = "32px";
     (middleMarker as HTMLElement).style.boxShadow = "0px 15px 36px -20px #e7e7e7";
     (middleMarker as HTMLElement).style.width = "calc(50%)";
+    (middleMarker as HTMLElement).style.justifyContent = "center";
 
     (rightMarker as HTMLElement).style.borderTop = "3px solid #c4c4c4";
     (rightMarker as HTMLElement).style.borderRadius = "32px";
     (rightMarker as HTMLElement).style.width = "calc(50%)";
+    (rightMarker	 as HTMLElement).style.justifyContent = "center";
     console.log('verbunden');
   }
   }

@@ -1,12 +1,25 @@
 @import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
-@media (width < 900px) {
+
+@media (width < 460px) {
+  #right .icons {
+    margin-right: 30%;
+  }
+
+  #left .icons {
+    margin-left: 30%;
+  }
+
+}
+
+@media (width < 950px) {
+
   #siteName {
     visibility: hidden;
   }
   .icons {
     height: 3rem;
     width: 3rem;
-    margin-right: -6.0rem;
+    transform: translate(100%);
   }
 
   .selected {
@@ -44,7 +57,10 @@
   }
 }
 
-@media (width>900px){
+@media (width>950px){
+  #siteName {
+    margin-left: 3px;
+  }
   .selected {
     position: relative;
     display: flex;
@@ -60,9 +76,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    .icons {
-      visibility: hidden;
-    }
+
   }
 
   .notSelected {
@@ -92,11 +106,6 @@
 
 }
 
-.selected .content #siteName {
-  
-  transform: translate(-15%);
-}
-
 .tabs {
   overflow: hidden;
   &.teams {
@@ -105,7 +114,7 @@
 }
 
 .notSelected .content{
-  opacity: .4;
+  opacity: .1;
   transition: opacity .4s ease-in-out;
 }
 .notSelected .content:hover {
@@ -114,13 +123,12 @@
 
 .tabs {
 background-color: white;
-width: 100%;
+
 }
 
 .container {
   display: flex;
   height: 5rem;
-  width: auto;
   align-items: flex-start;
   flex-direction: row; 
   justify-content: space-evenly;
@@ -143,7 +151,8 @@ a{
   height: 75%;
   width: 100%;
   position: absolute; 
-  display: flex; 
+  display: flex;
+  justify-content: space-around;
   flex-direction: row;
   transition: transform .2s ease-in-out;
   top:0;
@@ -152,17 +161,22 @@ a{
 }
 
 .marker #left{
+  display: flex;
+  align-items: center;
   background-color: transparent;
   z-index: 0
 }
 
 .marker #middle{
+  display: flex;
+  align-items: center;
   background-color: transparent;
   z-index: 0;
 }
 
 .marker #right{
+  display: flex;
+  align-items: center;
   background-color: transparent;
   z-index: 0;
 }
-
