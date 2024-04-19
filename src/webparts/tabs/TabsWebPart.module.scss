@@ -1,17 +1,55 @@
 @import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
 
-@media (width < 460px) {
-  #right .icons {
-    margin-right: 30%;
+@media (max-width: 450px) {
+  tabs {
+    width:100%;
+    overflow: hidden;
+    &.teams {
+      font-family: $ms-font-family-fallbacks;
+    }
+    display: flex;
   }
 
-  #left .icons {
-    margin-left: 30%;
-  }
-
+.container{width:66%;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
 }
 
-@media (width < 950px) {
+  .popup {
+    height: 25rem;
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: Segoe UI;
+    box-sizing: border-box; 
+  }
+
+  input[type="radio"]{
+    display: none;
+    width: 0;
+  }
+  .marker{
+    height: 75%;
+    width: 80%;
+    position: absolute; 
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    transition: transform .2s ease-in-out;
+    top:0;
+    z-index: 0;
+  }
+}
+
+@media (max-width: 950px) {
+.tabs {
+  overflow: hidden;
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
 
   #siteName {
     visibility: hidden;
@@ -55,6 +93,7 @@
     font-weight: 400;
     line-height: normal;
   }
+
 }
 
 @media (width>950px){
@@ -157,7 +196,6 @@ a{
   transition: transform .2s ease-in-out;
   top:0;
   z-index: 0;
-
 }
 
 .marker #left{
