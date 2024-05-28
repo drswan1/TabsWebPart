@@ -7,7 +7,6 @@
   },
   "main": "lib/index.js",
   "scripts": {
-
     "build": "tsc",
     "clean": "gulp clean",
     "test": "gulp test"
