@@ -15,9 +15,9 @@ export interface ITabsWebPartProps {
 
 export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps> {
   private tabsHashMap: { [key: string]: string } = {
-    orientiert: "https://labplusacat.sharepoint.com/sites/StudentPlace/Orientiert/",
-    informiert: "https://labplusacat.sharepoint.com/sites/StudentPlace/Informiert/",
-    verbunden: "https://labplusacat.sharepoint.com/sites/StudentPlace/Verbunden/",
+    orientiert: "https://plusacat.sharepoint.com/sites/StudentPlace/Orientiert/",
+    informiert: "https://plusacat.sharepoint.com/sites/StudentPlace/Informiert/",
+    verbunden: "https://plusacat.sharepoint.com/sites/StudentPlace/Verbunden/",
   };
 
   private setSelectedTab(tabKey: string): void {
