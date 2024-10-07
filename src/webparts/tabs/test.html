@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <div class="container">
+        <input type="radio" id="orientiert" name="option" value="orientiert">
+        <label class="box" for="orientiert">
+            <img src="./assests/Orientiert.png" alt="Orientiert">
+            <h1>Orientiert</h1>
+        </label>
+        
+        <input type="radio" id="informiert" name="option" value="informiert">
+        <label class="box" for="informiert">
+            <img src="./assests/Informiert.svg" alt="Informiert">
+            <h1>Informiert</h1>
+        </label>
+        <input type="radio" id="verbunden" name="option" value="verbunden">
+        <label class="box" for="verbunden">
+            <img src="./assests/Verbunden.svg" alt="Verbunden">
+            <h1>Verbunden</h1>
+        </label>
+    </div>
+    <script>
+
+       
+
+        function checkRadioButton() {
+            const OrientiertUrl = 'https://plusacat.sharepoint.com/sites/StudentPlace/Orientiert'
+            const InformiertUrl = 'https://plusacat.sharepoint.com/sites/StudentPlace/Informiert'
+            const VerbundenUrl = 'https://plusacat.sharepoint.com/sites/StudentPlace/Verbunden';
+
+            if (window.location.href = OrientiertUrl) {
+                document.getElementById('orientiert').checked;
+            }
+
+            if (window.location.href = InformiertUrl) {
+                document.getElementById('informiert').checked;
+            }
+
+            if (window.location.href = VerbundenUrl) {
+                document.getElementById('verbunden').checked
+            }
+        }
+
+        document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+            radio.addEventListener('change', () => {
+                const orientiertLabel = document.querySelector('label[for="orientiert"]');
+                const informiertLabel = document.querySelector('label[for="informiert"]');
+                const verbundenLabel = document.querySelector('label[for="verbunden"]');
+
+                // Reset border radius
+                orientiertLabel.style.borderBottomRightRadius = '';
+                informiertLabel.style.borderBottomLeftRadius = '';
+                informiertLabel.style.borderBottomRightRadius = '';
+                verbundenLabel.style.borderBottomLeftRadius = '';
+
+                if (document.getElementById('informiert').checked) {
+                    orientiertLabel.style.borderBottomRightRadius = '26px';
+                    verbundenLabel.style.borderBottomLeftRadius = '26px';
+                }
+                if (document.getElementById('verbunden').checked) {
+                    informiertLabel.style.borderBottomRightRadius = '26px';
+                }
+                if (document.getElementById('orientiert').checked) {
+                    informiertLabel.style.borderBottomLeftRadius = '26px';
+                    
+                }
+            });
+        });
+
+
+    function clickedTab() {
+    // Select all radio input elements and attach a 'change' event listener to each.
+        document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+            radio.addEventListener('change', () => {
+                // Check which radio button is checked
+                if (document.getElementById('orientiert').checked) {
+                    window.location.href('www.plusacat.sharepoint.com/sites/StudentPlace/Orientiert'); 
+                    console.log('Orientiert');
+                }
+                if (document.getElementById('informiert').checked) {
+                    window.location.href('www.plusacat.sharepoint.com/sites/StudentPlace/Informiert');
+                }
+                if (document.getElementById('verbunden').checked) {
+                    window.location.href('www.plusacat.sharepoint.com/sites/StudentPlace/Verbunden');
+                }
+            });
+        });
+    }
+
+
+    </script>
+</body>
+</html>

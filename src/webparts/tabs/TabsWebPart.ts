@@ -60,7 +60,8 @@ export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps
 
     // Render the HTML
     this.domElement.innerHTML = `
-    <section class="${styles.tabs} ">
+
+    <section>
     <div class="${styles.container}">
 
       
