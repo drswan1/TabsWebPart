@@ -3,7 +3,7 @@
   "solution": {
     "name": "tabs-client-side-solution",
     "id": "823e6849-e847-4002-9024-3ac5365fa923",
-    "version": "1.0.0.0",
+    "version": "2.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
