@@ -23,24 +23,24 @@ export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps
          <div class="${styles.container}">
         <input type="radio" id="${styles.orientiert}" name="option" value="orientiert">
         <label class="${styles.box}" for="orientiert">
-        <a href="${'https://plusacat.sharepoint.com/sites/StudentPlace/Orientiert'}">
+        <a class="${styles.link}" href="${'https://plusacat.sharepoint.com/sites/StudentPlace/Orientiert'}">
             <img class=${styles.logo} src="${require('./assets/Orientiert.png')}" alt="Orientiert">
-            <h1>Orientiert</h1>
+            <h1 class="${styles.title}">Orientiert</h1>
         </a>
         </label>
         
         <input type="radio" id="${styles.informiert}" name="option" value="informiert">
         <label class="${styles.box}" for="informiert">
-          <a href="${'https://plusacat.sharepoint.com/sites/StudentPlace/Informiert'}">
+          <a class="${styles.link}" href="${'https://plusacat.sharepoint.com/sites/StudentPlace/Informiert'}">
             <img class=${styles.logo} src="${require('./assets/Informiert.svg')}" alt="Informiert">
-            <h1>Informiert</h1>
+            <h1 class="${styles.title}">Informiert</h1>
           </a>
         </label>
         <input type="radio" id="${styles.verbunden}" name="option" value="verbunden">
         <label class="${styles.box}" for="verbunden">
-          <a href="${'https://plusacat.sharepoint.com/sites/StudentPlace/Verbunden'}">
+          <a class="${styles.link}" href="${'https://plusacat.sharepoint.com/sites/StudentPlace/Verbunden'}">
             <img class=${styles.logo} src="${require('./assets/Verbunden.svg')}" alt="Verbunden">
-            <h1>Verbunden</h1>
+            <h1 class="${styles.title}">Verbunden</h1>
           </a>
         </label>
     </div>

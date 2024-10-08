@@ -25,7 +25,8 @@
   font-family: Segoe UI;
   width:20%;
 }
-a{
+
+.link{
   all: unset;
   display: flex;
   font-size: small;
@@ -79,7 +80,7 @@ input[type="radio"]:not(:checked) + label:hover {
 
 
 @media screen and (max-width: 750px) {
-    h1 {
+    .title {
       display:none;
   }
 
