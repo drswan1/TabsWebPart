@@ -1,12 +1,12 @@
 @import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
 
 .container {
-  font-family: unset;
   display: flex;
   width: auto;
   justify-content: space-evenly;
     height: 5rem;
     margin-top: 1.5em;
+  position: left;
 }
 
 .logo {
@@ -22,7 +22,6 @@
   font-size: small;
   justify-content: center;
   align-self: center;
-  font-family: Segoe UI;
   width:20%;
 }
 
@@ -33,7 +32,6 @@
   justify-content: center;
   align-self: center;
   flex-grow: 1;
-  font-family: Segoe UI;
   font-size: 1.20rem;
 }
 input[type="radio"]{
