@@ -22,7 +22,6 @@
   font-size: small;
   justify-content: center;
   align-self: center;
-  width:20%;
 }
 
 .link{
@@ -46,6 +45,7 @@ input[type="radio"]:checked + label {
   font-weight: 700;
   line-height: normal;
   color: var(--Dark, #5b5b5b);
+  width:20%;
 }
 
 input[type="radio"]:not(:checked) + label {
@@ -57,7 +57,7 @@ input[type="radio"]:not(:checked) + label {
   line-height: normal;
   color: var(--Dark, #222);
   box-shadow: 0px 15px 36px -20px #e7e7e7;
-  
+  width:20%;
 }
 
 input[type="radio"]:not(:checked) + label:hover {

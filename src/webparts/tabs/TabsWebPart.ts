@@ -15,15 +15,14 @@ export interface ITabsWebPartProps {
 
 export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps> {
   public render(): void {
-
+ 
     // Render the HTML
     this.domElement.innerHTML = `
-
     <section>
          <div class="${styles.container}">
         <input type="radio" id="${styles.orientiert}" name="option" value="orientiert">
         <label class="${styles.box}" for="orientiert">
-        <a class="${styles.link}" href="${'https://plusacat.sharepoint.com/sites/StudentPlace/Orientiert'}">
+        <a class="${styles.link}" href="${'https://twhrg.sharepoint.com/Orientiert/SitePages/Home.aspx'}">
             <img class=${styles.logo} src="${require('./assets/Orientiert.png')}" alt="Orientiert">
             <h1 class="${styles.title}">Orientiert</h1>
         </a>
@@ -31,29 +30,28 @@ export default class TabsWebPart extends BaseClientSideWebPart<ITabsWebPartProps
         
         <input type="radio" id="${styles.informiert}" name="option" value="informiert">
         <label class="${styles.box}" for="informiert">
-          <a class="${styles.link}" href="${'https://plusacat.sharepoint.com/sites/StudentPlace/Informiert'}">
+          <a class="${styles.link}" href="${'https://twhrg.sharepoint.com/Informiert/SitePages/Home.aspx'}">
             <img class=${styles.logo} src="${require('./assets/Informiert.svg')}" alt="Informiert">
             <h1 class="${styles.title}">Informiert</h1>
           </a>
         </label>
         <input type="radio" id="${styles.verbunden}" name="option" value="verbunden">
         <label class="${styles.box}" for="verbunden">
-          <a class="${styles.link}" href="${'https://plusacat.sharepoint.com/sites/StudentPlace/Verbunden'}">
+          <a class="${styles.link}" href="${'https://twhrg.sharepoint.com/Verbunden/SitePages/Home.aspx'}">
             <img class=${styles.logo} src="${require('./assets/Verbunden.svg')}" alt="Verbunden">
             <h1 class="${styles.title}">Verbunden</h1>
           </a>
         </label>
     </div>
   </section>`;
-
-this.checkRadioButton();
+  this.checkRadioButton();
 // this. cssSelector();
   }
 
   private checkRadioButton(): void {
-    const OrientiertUrl = 'https://plusacat.sharepoint.com/sites/StudentPlace/Orientiert';
-    const InformiertUrl = 'https://plusacat.sharepoint.com/sites/StudentPlace/Informiert';
-    const VerbundenUrl = 'https://plusacat.sharepoint.com/sites/StudentPlace/Verbunden';
+    const OrientiertUrl = 'https://twhrg.sharepoint.com/Orientiert/SitePages/Home.aspx';
+    const InformiertUrl = 'https://twhrg.sharepoint.com/Informiert/SitePages/Home.aspx';
+    const VerbundenUrl = 'https://twhrg.sharepoint.com/Verbunden/SitePages/Home.aspx';
 
     if (window.location.href.includes(OrientiertUrl)) {
         const orientiertRadio = document.getElementById(styles.orientiert) as HTMLInputElement;
