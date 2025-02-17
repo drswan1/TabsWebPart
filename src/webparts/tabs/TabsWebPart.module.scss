@@ -1,12 +1,14 @@
 @import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
 
+
 .container {
   display: flex;
   width: auto;
   justify-content: space-evenly;
-    height: 5rem;
-    margin-top: 1.5em;
-  position: left;
+  height: 5rem;
+  margin-top: 1.5em;          // Stick to top of its container
+  z-index: 100;       // Ensure it stays above other content
+  background: white;   // Add background to prevent content showing through
 }
 
 .logo {
