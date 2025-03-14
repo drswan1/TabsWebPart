@@ -26,6 +26,7 @@
     "express": "^4.19.2",
     "jsonpath-plus": "^10.3.0",
     "lodash.template": "^4.5.0",
+    "path-to-regexp": "^0.1.12",
     "postcss": "^8.4.31",
     "qs": "^6.5.3",
     "requirejs": "^2.3.7",
